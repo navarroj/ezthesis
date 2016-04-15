@@ -37,6 +37,7 @@
 %%   nocolors   - no incluir "xcolor" para producir ligas con colores
 %%   nographicx - no incluir "graphicx" para insertar gr'aficos
 %%   nonatbib   - no incluir "natbib" para administrar la bibliograf'ia
+%%   nosubfiles  - no incluir "subfiles" para la inclusi'on de archivos
 
 %% Paquetes adicionales requeridos se pueden agregar tambi'en aqu'i.
 %% Por ejemplo:
@@ -74,13 +75,13 @@
 
 %% # Portada de la tesis #
 %% Mirar el archivo "titlepage.tex" para los detalles.
-\include{titlepage}
+\subfile{titlepage}
 
 %% # Prefacios #
 %% Por cada prefacio (p.e. agradecimientos, resumen, etc.) crear
 %% un nuevo archivo e incluirlo aqu'i.
 %% Para m'as detalles y un ejemplo mirar el archivo "gracias.tex".
-\include{gracias}
+\subfile{gracias}
 
 %% # 'Indices y listas de contenido #
 %% Quitar los comentarios en las lineas siguientes para obtener listas de
@@ -93,18 +94,18 @@
 %% Por cada cap'itulo hay que crear un nuevo archivo e incluirlo aqu'i.
 %% Mirar el archivo "intro.tex" para un ejemplo y recomendaciones para
 %% escribir.
-\include{intro}
-%\include{capitulo1}
-%\include{capitulo2}
-%\include{capitulo3}
-%\include{conclu}
+\subfile{intro}
+%\subfile{capitulo1}
+%\subfile{capitulo2}
+%\subfile{capitulo3}
+%\subfile{conclu}
 
 \appendix
 %% Cap'itulos incluidos despues del comando \appendix aparecen como ap'endices
 %% de la tesis.
-%\include{apendiceA}
-%\include{apendiceB}
-%\include{apendiceC}
+%\subfile{apendiceA}
+%\subfile{apendiceB}
+%\subfile{apendiceC}
 
 %% Incluir la bibliograf'ia. Mirar el archivo "biblio.bib" para m'as detales
 %% y un ejemplo.
