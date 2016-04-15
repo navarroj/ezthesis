@@ -17,6 +17,7 @@
 \newif\if@graphicx\@graphicxtrue
 \newif\if@natbib\@natbibtrue
 \newif\if@bibnumbers\@bibnumbersfalse
+\newif\if@subfiles\@subfilestrue
 
 \def\PassLayoutOptions#1{%
 	\PassOptionsToClass{#1}{report}
@@ -46,6 +47,7 @@
 \DeclareOption{nobibtoc}{\@bibfixfalse}
 \DeclareOption{nofancyhdr}{\@fancyhdrfalse}
 \DeclareOption{nocolors}{\@colorsfalse}
+\DeclareOption{nosubfiles}{\@subfilesfalse}
 \DeclareOption{nographicx}{\@graphicxfalse}
 \DeclareOption{nonatbib}{\@natbibfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
@@ -247,4 +249,9 @@
 	\RequirePackage[all]{hypcap}
 }
 
+% Subfiles
+% Permite incluir archivos .tex que se pueden compilar cada uno independientemente
+\if@subfiles
+	\RequirePackage{subfiles}
+\fi
 \endinput
